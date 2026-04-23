@@ -3,9 +3,18 @@
 This backend is designed for a **Render Web Service** using Node.js and Express.
 
 ## Files
+- `app.js`
+- `db.js`
 - `server.js`
+- `db/01_schema.sql`
 - `package.json`
 - `.env.example`
+- `test/api.test.js`
+
+## What changed in this verified version
+- The API now **auto-runs the schema** on startup by default.
+- The backend now has an **automated test suite**.
+- The app code is split so the API can be tested without starting a real HTTP server.
 
 ## Local run
 1. Install dependencies:
@@ -18,6 +27,11 @@ This backend is designed for a **Render Web Service** using Node.js and Express.
    npm start
    ```
 
+## Local tests
+```bash
+npm test
+```
+
 ## Render deployment
 Create a **Web Service** on Render and point it to this folder.
 
@@ -25,11 +39,13 @@ Suggested settings:
 - **Environment:** Node
 - **Build Command:** `npm install`
 - **Start Command:** `npm start`
+- **Health Check Path:** `/api/health`
 
 Add these environment variables in Render:
 - `DATABASE_URL` = your Render Postgres internal database URL
-- `DATABASE_SSL` = `true` or `false`
-- `FRONTEND_ORIGIN` = your Render Static Site URL
+- `DATABASE_SSL` = `false` for the internal URL in most Render setups
+- `AUTO_RUN_MIGRATIONS` = `true`
+- `FRONTEND_ORIGIN` = optional, for stricter CORS later
 
 ## Main API routes
 - `GET /api/health`
