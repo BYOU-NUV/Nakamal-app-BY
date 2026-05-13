@@ -1,10 +1,58 @@
-# Nakamal Render App
+# ITDI204 Cloud Deployment Project
+
+## Student Information
+
+- Student name: Benoit YOU
+- Course: ITDI204 Cloud Computing
+- Application: Nakamal-App
+
+## Project Overview
+
+This application is an application listing all the Nakamals in Port VILA
+
+## Cloud Deployment
+
+This application is deployed using Render.
+
+## Repository Structure
 
 This package contains:
 - `frontend-static/` → Render Static Site
 - `backend-api/` → Render Web Service (Node.js + Express)
 - `database/` → PostgreSQL schema scripts
 - `render.yaml` → optional Render Blueprint for one-repo deployment
+
+## Local Installation
+
+Non relevant
+
+## Branching Strategy
+
+| Branch | Purpose |
+|---|---|
+| main | Production version |
+| staging | Testing version before production |
+| benoit-dev | Personal working branch |
+
+## Render Environments
+
+| Environment | Branch | Render URL |
+|---|---|---|
+| Staging | staging | Add URL here |
+| Production | main | Add URL here |
+
+## Environment Variables
+
+| Variable Name | Purpose | Where it is stored |
+|---|---|---|
+| PORT | Port used by the app | Render |
+| API_KEY | External API key, if used | Render Environment Variables |
+
+## Deployment Notes
+
+Explain any issue you had during deployment and how you fixed it.
+
+# Others comments
 
 ## What is verified in this version
 - The backend dependencies install cleanly.
