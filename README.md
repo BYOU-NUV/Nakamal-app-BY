@@ -39,7 +39,7 @@ Non relevant
 | Environment | Branch | Render URL |
 |---|---|---|
 | Staging | staging | Add URL here |
-| Production | main | Add URL here |
+| Production | main | https://nakamal-app.onrender.com |
 
 ## Environment Variables
 
